@@ -6,14 +6,12 @@ import org.junit.jupiter.api.*;
 import pages.PracticeFormPage;
 import pages.PracticeFormResultPage;
 
+import static com.codeborne.selenide.Selenide.executeJavaScript;
 import static helpers.PageUrls.AUTOMATION_PRACTICE_FORM_ENDPOINT;
 import static helpers.PageUrls.DEMO_QA_BASE_URL;
 
 public class PracticeFormPageTests extends BaseTest {
-    @BeforeAll
-    static void beforeAll() {
-        setUpBrowser();
-    }
+
 
     @BeforeEach
     void setUp() {
@@ -31,10 +29,12 @@ public class PracticeFormPageTests extends BaseTest {
 
     @Test
     void submitFormTest() {
+        executeJavaScript("$('#fixedban').remove()");
+        executeJavaScript("$('footer').remove()");
 
         String picturePath = "src/test/resources/img.png";
-        String firstName = "asfasfasf";
-        String lastName = "asfasfasf";
+        String firstName = "Додо";
+        String lastName = "Ивашин";
         String email = "asfasfasf@asasd.ew";
         String gender = "Male";
         String phoneNumber = "9995552211";
@@ -58,8 +58,16 @@ public class PracticeFormPageTests extends BaseTest {
                 .selectCity()
                 .submitForm();
 
-        Assertions.assertEquals(email, resultPage.studentEmailResult.shouldBe(Condition.visible).getText());
-        Assertions.assertEquals(subject, resultPage.subjectsResult.shouldBe(Condition.visible).getText());
-
+        resultPage.checkResults(
+                firstName + " " + lastName,
+                email,
+                gender,
+                phoneNumber,
+                "26 February,2024",
+                subject,
+                "Sports, Reading, Music",
+                "img.png",
+                address,
+                "NCR Delhi");
     }
 }

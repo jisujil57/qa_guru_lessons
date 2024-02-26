@@ -101,4 +101,5 @@ public class PracticeFormPage {
     public void submitForm () {
         $("#submit").click();
     }
+
 }
