@@ -44,7 +44,7 @@ public class GItHubTest extends BaseTest{
     }
 
     @Test
-    void checkJunitExampleCode() {
+    void checkGitHubNavBar() {
 
         open("https://github.com");
         $(byTagAndText("button", "Solutions")).hover();
