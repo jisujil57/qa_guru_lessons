@@ -3,7 +3,6 @@ package tests;
 
 import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -22,10 +21,6 @@ public class GItHubTest extends BaseTest{
             "    $(\"#second\").should(visible).click();\n" +
             "  }\n" +
             "}";
-
-    @BeforeEach
-    void setUp() {
-    }
 
     @AfterEach
     void tearDown() {
