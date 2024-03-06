@@ -13,11 +13,11 @@ public class BasicJavaTest {
         double quotient = 10.0 / 3.0;
         int remainder = 10 % 3;
 
-        System.out.println("Сложение: " + sum);        // Вывод: 8
-        System.out.println("Вычитание: " + difference); // Вывод: 5
-        System.out.println("Умножение: " + product);    // Вывод: 24
-        System.out.println("Деление: " + quotient);     // Вывод: 3.3333333333333335
-        System.out.println("Остаток от деления: " + remainder); // Вывод: 1
+        System.out.println("Сложение: " + sum);
+        System.out.println("Вычитание: " + difference);
+        System.out.println("Умножение: " + product);
+        System.out.println("Деление: " + quotient);
+        System.out.println("Остаток от деления: " + remainder);
 
         // Логические операции
         boolean condition1 = true;
