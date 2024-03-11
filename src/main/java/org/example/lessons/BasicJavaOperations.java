@@ -1,11 +1,9 @@
-package tests;
+package org.example.lessons;
 
-import org.junit.jupiter.api.Test;
+public class BasicJavaOperations {
 
-public class BasicJavaTest {
+    public static void main(String[] args) {
 
-    @Test
-    public void basicJavaLesson1() {
         // Арифметические операции
         int sum = 5 + 3;
         int difference = 8 - 3;
@@ -77,3 +75,5 @@ public class BasicJavaTest {
         } while (doWhileCount < 2);
     }
 }
+
+
