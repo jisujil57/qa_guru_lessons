@@ -1,6 +1,7 @@
 package tests;
 
 import com.codeborne.selenide.Selenide;
+import org.junit.jupiter.api.DisplayName;
 import pages.TextBoxPage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -8,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import static helpers.PageUrls.DEMO_QA_BASE_URL;
 import static helpers.PageUrls.TEXT_BOX_FORM_ENDPOINT;
 
+@DisplayName("Проверка text-box-form")
 public class TextBoxTest extends BaseTest {
     @BeforeEach
     void setUp() {
@@ -22,6 +24,7 @@ public class TextBoxTest extends BaseTest {
     String permanentAddress = "Apt. 583 7706 Grimes Wall, Sawaynport, WI 41742-3645";
 
     @Test
+    @DisplayName("Корректное заполнение полей")
     void fillTextBoxForm() {
         textBoxPage.setUserName(name)
                 .setEmail(email)
