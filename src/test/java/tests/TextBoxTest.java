@@ -1,10 +1,8 @@
 package tests;
 
 import com.codeborne.selenide.Selenide;
-import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.*;
 import pages.TextBoxPage;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 
 import static helpers.PageUrls.DEMO_QA_BASE_URL;
 import static helpers.PageUrls.TEXT_BOX_FORM_ENDPOINT;
