@@ -1,6 +1,8 @@
 package tests;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 
 public class BaseTest {
@@ -15,6 +17,10 @@ public class BaseTest {
         Configuration.timeout = 4000;
         Configuration.pageLoadStrategy = "eager";
 
+    }
+    @AfterEach
+    void tearDown() {
+        Selenide.closeWebDriver();
     }
 
 }
