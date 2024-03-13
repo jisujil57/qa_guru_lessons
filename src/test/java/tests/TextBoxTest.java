@@ -29,7 +29,6 @@ public class TextBoxTest extends BaseTest {
                 .setCurrentAddress(currentAdress)
                 .setPermanentAddress(permanentAddress)
                 .submit();
-        Selenide.sleep(2000);
 
         textBoxPage.checkTableValue("name", name)
                 .checkTableValue("email", email)
