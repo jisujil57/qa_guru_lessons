@@ -70,8 +70,8 @@ public class PracticeFormPage {
 
     }
 
-    public PracticeFormPage uploadPicture(String hobbyFilePath) {
-        $("#uploadPicture").uploadFile(new File(hobbyFilePath));
+    public PracticeFormPage uploadPicture(String pictureName) {
+        $("#uploadPicture").uploadFile(new File("src/test/resources/" + pictureName));
         return this;
 
     }

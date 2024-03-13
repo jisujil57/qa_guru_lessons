@@ -1,6 +1,7 @@
 package tests;
 
 import com.codeborne.selenide.Selenide;
+import helpers.RandomDataGenerator;
 import org.junit.jupiter.api.*;
 import pages.TextBoxPage;
 
@@ -16,10 +17,10 @@ public class TextBoxTest extends BaseTest {
 
     TextBoxPage textBoxPage = new TextBoxPage();
 
-    String name = "Kaka Ronaldo Karlson";
-    String email = "tester@mail.wew";
-    String currentAdress = "88473 Spencer Port, New Donnetta, TX 29597-9376";
-    String permanentAddress = "Apt. 583 7706 Grimes Wall, Sawaynport, WI 41742-3645";
+    String name = RandomDataGenerator.randomFullName();
+    String email = RandomDataGenerator.randomEmail();
+    String currentAdress = RandomDataGenerator.randomAddress();
+    String permanentAddress = RandomDataGenerator.randomAddress();
 
     @Test
     @DisplayName("Корректное заполнение полей")
