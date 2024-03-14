@@ -92,3 +92,4 @@ public class PracticeFormPageTests extends BaseTest {
         resultPage.checkModalHiddenAfterInvalidFormSubmit();
     }
 }
+
