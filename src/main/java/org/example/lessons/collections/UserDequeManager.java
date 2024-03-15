@@ -57,6 +57,19 @@ public class UserDequeManager {
         } while (true);
     }
 
+    public void printUserCountAndNames() {
+        System.out.println("\nКоличество пользователей: " + userDeque.size());
+        System.out.println("Имена пользователей:");
+
+        Object[] usersArray = userDeque.toArray();
+        for (int i = 0; i < usersArray.length; i++) {
+            String user = (String) usersArray[i];
+            String[] userInfo = user.split(":");
+            System.out.println(userInfo[1]);
+        }
+    }
+
+
 
 
     public static void main(String[] args) {
@@ -68,6 +81,8 @@ public class UserDequeManager {
         userManager.addUser("003", "Саша");
         userManager.addUser("004", "Таня");
         userManager.addUser("005", "Кирилл");
+
+        userManager.printUserCountAndNames();
 
         userManager.printUsers();
 
