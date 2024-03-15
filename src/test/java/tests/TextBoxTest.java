@@ -16,11 +16,11 @@ public class TextBoxTest extends BaseTest {
     }
 
     TextBoxPage textBoxPage = new TextBoxPage();
-
-    String name = RandomDataGenerator.randomFullName();
-    String email = RandomDataGenerator.randomEmail();
-    String currentAdress = RandomDataGenerator.randomAddress();
-    String permanentAddress = RandomDataGenerator.randomAddress();
+    RandomDataGenerator randomDataGenerator = new RandomDataGenerator();
+    String name = randomDataGenerator.randomFullName();
+    String email = randomDataGenerator.randomEmail();
+    String currentAdress = randomDataGenerator.randomAddress();
+    String permanentAddress = randomDataGenerator.randomAddress();
 
     @Test
     @DisplayName("Корректное заполнение полей")

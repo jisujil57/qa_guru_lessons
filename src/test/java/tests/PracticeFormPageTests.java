@@ -18,26 +18,27 @@ public class PracticeFormPageTests extends BaseTest {
 
     PracticeFormPage practiceFormPage = new PracticeFormPage();
     PracticeFormResultPage resultPage = new PracticeFormResultPage();
+    RandomDataGenerator randomDataGenerator = new RandomDataGenerator();
 
     @Test
     @DisplayName("Корректное заполнение всех полей")
     void submitFormTest() {
         practiceFormPage.removeBanner();
 
-        String firstName = RandomDataGenerator.randomFirstName();
-        String lastName = RandomDataGenerator.randomLastName();
-        String email = RandomDataGenerator.randomEmail();
-        String gender = RandomDataGenerator.randomGender();
-        String phoneNumber = RandomDataGenerator.randomPhone();
-        String year = RandomDataGenerator.randomYear();
-        String month = RandomDataGenerator.randomMonth();
-        String day = RandomDataGenerator.randomDay();
-        String subject = RandomDataGenerator.randomSubject();
-        String hobby = RandomDataGenerator.randomHobby();
-        String pictureName = RandomDataGenerator.randomPictureName();
-        String address = RandomDataGenerator.randomAddress();
-        String state = RandomDataGenerator.randomState();
-        String city = RandomDataGenerator.randomCity(state);
+        String firstName = randomDataGenerator.randomFirstName();
+        String lastName = randomDataGenerator.randomLastName();
+        String email = randomDataGenerator.randomEmail();
+        String gender = randomDataGenerator.randomGender();
+        String phoneNumber = randomDataGenerator.randomPhone();
+        String year = randomDataGenerator.randomYear();
+        String month = randomDataGenerator.randomMonth();
+        String day = randomDataGenerator.randomDay();
+        String subject = randomDataGenerator.randomSubject();
+        String hobby = randomDataGenerator.randomHobby();
+        String pictureName = randomDataGenerator.randomPictureName();
+        String address = randomDataGenerator.randomAddress();
+        String state = randomDataGenerator.randomState();
+        String city = randomDataGenerator.randomCity(state);
 
         practiceFormPage.fillFirstName(firstName)
                 .setLastName(lastName)
@@ -69,10 +70,10 @@ public class PracticeFormPageTests extends BaseTest {
     @Test
     @DisplayName("Корректное заполнение обязательных полей")
     void submitFormWithRequiredFieldsTest() {
-        String firstName = RandomDataGenerator.randomFirstName();
-        String lastName = RandomDataGenerator.randomLastName();
-        String gender = RandomDataGenerator.randomGender();
-        String phoneNumber = RandomDataGenerator.randomPhone();
+        String firstName = randomDataGenerator.randomFirstName();
+        String lastName = randomDataGenerator.randomLastName();
+        String gender = randomDataGenerator.randomGender();
+        String phoneNumber = randomDataGenerator.randomPhone();
 
         practiceFormPage.fillFirstName(firstName)
                 .setLastName(lastName)

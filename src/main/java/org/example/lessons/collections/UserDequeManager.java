@@ -60,6 +60,7 @@ public class UserDequeManager {
 
 
     public static void main(String[] args) {
+
         UserDequeManager userManager = new UserDequeManager();
 
         userManager.addUser("001", "Федя");
