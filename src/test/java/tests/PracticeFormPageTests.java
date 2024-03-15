@@ -19,7 +19,7 @@ public class PracticeFormPageTests extends BaseTest {
     PracticeFormPage practiceFormPage = new PracticeFormPage();
     PracticeFormResultPage resultPage = new PracticeFormResultPage();
 
-    @RepeatedTest(15)
+    @Test
     @DisplayName("Корректное заполнение всех полей")
     void submitFormTest() {
         practiceFormPage.removeBanner();
