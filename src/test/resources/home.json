@@ -1,0 +1,6 @@
+{
+  "address": "123 Main St",
+  "bedroomNames": ["Master Bedroom", "Guest Bedroom", "Kids Bedroom"],
+  "bathrooms": 2,
+  "area": 150.5
+}
