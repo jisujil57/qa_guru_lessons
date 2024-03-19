@@ -30,7 +30,6 @@ public class GithubWithAllureLambdaTest extends BaseTest {
             "allure, /allure-framework/allure2, Group by",
     })
     void checkIssueNameInGithub(String searchQuery, String repositoryLink, String expectedIssuesName) {
-        SelenideLogger.addListener("allure", new AllureSelenide());
 
         step("Открыть страницу GitHub", () ->
                 Selenide.open(GITHUB_BASE_URL));
