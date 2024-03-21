@@ -21,12 +21,12 @@ public class BaseTest {
     public static void setUpBrowser() {
         Configuration.browser = SystemProperties.getProperty("browser", "firefox");
         Configuration.baseUrl = SystemProperties.getProperty("baseUrl", "https://demoqa.com");
-        Configuration.browserSize = SystemProperties.getProperty("browserSize", "1920x1080");;
-        Configuration.timeout = 4000;
-        Configuration.browserVersion = "122";
-        Configuration.pageLoadStrategy = "eager";
+        Configuration.browserSize = SystemProperties.getProperty("browserSize", "1920x1080");
+        Configuration.browserVersion = SystemProperties.getProperty("browserVersion", "122");
         String selenoidUrl = System.getProperty("selenoidUrl", "https://user1:1234@selenoid.autotests.cloud");
         Configuration.remote = selenoidUrl + "/wd/hub";
+        Configuration.pageLoadStrategy = "eager";
+        Configuration.timeout = 4000;
 //
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
