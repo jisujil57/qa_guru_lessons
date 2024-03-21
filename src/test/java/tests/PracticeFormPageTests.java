@@ -47,6 +47,7 @@ public class PracticeFormPageTests extends BaseTest {
         Attach.pageSource();
         Attach.browserConsoleLogs();
         Attach.addVideo();
+        Selenide.closeWebDriver();
 
     }
 
