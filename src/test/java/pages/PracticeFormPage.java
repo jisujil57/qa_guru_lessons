@@ -5,10 +5,7 @@ import com.codeborne.selenide.SelenideElement;
 import components.CalendarComponents;
 import io.qameta.allure.Step;
 
-import java.io.File;
-
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Selenide.executeJavaScript;
 
 public class PracticeFormPage {
     SelenideElement firstNameInput = $x("//input[@placeholder='First Name']");
@@ -70,7 +67,7 @@ public class PracticeFormPage {
 
     @Step("Загрузить изображение")
     public PracticeFormPage uploadPicture(String pictureName) {
-        $("#uploadPicture").uploadFile(new File("src/test/resources/" + pictureName));
+        $("#uploadPicture").uploadFromClasspath(pictureName);
         return this;
     }
 

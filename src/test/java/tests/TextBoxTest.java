@@ -2,17 +2,18 @@ package tests;
 
 import com.codeborne.selenide.Selenide;
 import helpers.RandomDataGenerator;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import pages.TextBoxPage;
 
-import static helpers.PageUrls.DEMO_QA_BASE_URL;
 import static helpers.PageUrls.TEXT_BOX_FORM_ENDPOINT;
 
 @DisplayName("Проверка text-box-form")
 public class TextBoxTest extends BaseTest {
     @BeforeEach
     void setUp() {
-        Selenide.open(DEMO_QA_BASE_URL + TEXT_BOX_FORM_ENDPOINT);
+        Selenide.open(TEXT_BOX_FORM_ENDPOINT);
     }
 
     TextBoxPage textBoxPage = new TextBoxPage();
