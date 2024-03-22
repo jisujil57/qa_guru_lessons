@@ -60,3 +60,9 @@ task smoke_test(type: Test) {
         includeTags("smoke_test")
     }
 }
+
+task fake_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("fake_test")
+    }
+}

@@ -8,10 +8,12 @@ import org.openqa.selenium.TakesScreenshot;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.util.Objects;
 
 import static com.codeborne.selenide.Selenide.sessionId;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static org.openqa.selenium.logging.LogType.BROWSER;
+import static tests.BaseTest.BROWSER_NAME;
 
 public class Attach {
     @Attachment(value = "{attachName}", type = "image/png")
@@ -30,10 +32,15 @@ public class Attach {
     }
 
     public static void browserConsoleLogs() {
-        attachAsText(
-                "Browser console logs",
-                String.join("\n", Selenide.getWebDriverLogs(BROWSER))
-        );
+
+        if (!Objects.equals(BROWSER_NAME, "firefox")) {
+            attachAsText(
+                    "Browser console logs",
+                    String.join("\n", Selenide.getWebDriverLogs(BROWSER))
+            );
+        }
+
+
     }
 
     @Attachment(value = "Video", type = "text/html", fileExtension = ".html")
